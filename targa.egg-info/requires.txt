@@ -1,0 +1,4 @@
+numpy>=1.4.0
+scipy>=0.9.0
+pandas>=0.17.0
+gseapy>=0.9.3

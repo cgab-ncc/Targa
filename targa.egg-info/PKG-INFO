@@ -1,0 +1,73 @@
+Metadata-Version: 1.0
+Name: targa
+Version: 0.0.1
+Summary: A Python package for identifying targetable genes in cancer with GSEA and KEGG pathway enrichment analysis
+Home-page: https://github.com/cgab-ncc/Targa
+Author: Andy Jinseok Lee
+Author-email: jinseok.lee@ncc.re.kr
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: # Targa (Targetable Genes Analysis)
+        
+        Targa is a python package for identifying targetable genes using gene expression data.<br>
+        The project was started in 2017 at National Cancer Center of Korea.
+        
+        ## Installation
+        ### Dependencies
+        Targa requires:
+        * Python (>= 2.7)
+        * numpy
+        * scipy
+        * pandas
+        
+        ### Installation
+        To install Targa, run the install command:
+        ```
+        pip install -U targa
+        ```
+        
+        ## Getting Started
+        Here are example python codes for using Targa<br>
+        Load data
+        ```
+        import targa as tg
+        import pandas as pd
+        
+        gene_expression_file = "data/sample_gene_expression_file.csv"
+        clinical_data_file = "data/sample_clinical_data_file.csv"
+        
+        ```
+        
+        ## Getting Started
+        Load data
+        ```
+        from targa.data import make_dataset
+        
+        genomic_matrix_file = "/data/raw/genomicMatrix"
+        clinical_data_file = "/data/raw/clinical_data"
+        genomic_clinical_data = make_dataset.GenomicClinicalData(genomic_matrix_file=genomic_matrix_file,
+        clinical_data_file=clinical_data_file)
+        ```
+        
+        Generate features from genomic and clinical data
+        ```
+        
+        ```
+        
+        Rank the genes using the TOPSIS method
+        ```
+        
+        ```
+        
+        Or, rank the genes using the rank product method
+        ```
+        
+        ```
+        
+        Perform enrichment analysis of the ranked genes
+        ```
+        
+        ```
+        
+Keywords: targetable,pathway,enrichment,genes,multiple gene lists,cancer,genomics
+Platform: UNKNOWN
