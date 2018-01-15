@@ -37,7 +37,7 @@ def topsis(df_features, criteria_weights, criteria_directions, verbose=True):
             print("criteria_directions values must be either '+' or '-'")
             return
     # Prepare data to run TOPSIS
-    genes = df_features.loc[:, 'gene']
+    genes = df_features.loc[:, 'gene'].values.tolist()
     matrix = df_features.loc[:, df_features.columns != 'gene']
     matrix = matrix.values.tolist()
 
@@ -51,6 +51,7 @@ def topsis(df_features, criteria_weights, criteria_directions, verbose=True):
     data = {'rank':[], 'gene':[], 'similarity_score':[]}
     rank = 1
     for i in results:
+        print(i)
         data['rank'].append(rank)
         data['gene'].append(genes[i[0]])
         data['similarity_score'].append(i[1])

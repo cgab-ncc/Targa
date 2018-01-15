@@ -68,4 +68,5 @@ def prerank_gsea(df_ranked_genes,
                       processes=processes,
                       permutation_num=permutation_num,
                       weighted_score_type=0,
+                      graph_num=100,
                       outdir=report_save_dir, format=report_format)

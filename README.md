@@ -1,3 +1,4 @@
+<div,   
 <img src="Targa_Logo_Final.png" width="400" height="200"><br/>
 [![GitHub version](https://badge.fury.io/gh/cgab-ncc%2FTarga.svg)](http://badge.fury.io/gh/cgab-ncc%2FTarga)
 [![python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)](https://img.shields.io/badge/python-3.6-blue.svg)
