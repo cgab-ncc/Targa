@@ -15,7 +15,10 @@ def prerank_gsea(df_ranked_genes,
                  top_k=100,
                  report_format="svg",
                  processes=4,
-                 permutation_num=100):
+                 graph_num=100,
+                 permutation_num=100,
+                 min_size=15,
+                 max_size=500):
     """
     This function runs the GSEA prerank function
 
@@ -68,5 +71,7 @@ def prerank_gsea(df_ranked_genes,
                       processes=processes,
                       permutation_num=permutation_num,
                       weighted_score_type=0,
-                      graph_num=100,
+                      graph_num=graph_num,
+                      min_size=min_size,
+                      max_size=max_size,
                       outdir=report_save_dir, format=report_format)

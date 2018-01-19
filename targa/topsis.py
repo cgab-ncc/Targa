@@ -15,8 +15,7 @@ def topsis(df_features, criteria_weights, criteria_directions, verbose=True):
                 '-' indicates that the lower the criterion value, the better
     MODIFIES:	nothing
     EFFECTS:	runs the TOPSIS (Tehcnique for Order of Preference by Simiarilty to Ideal Solution)
-                and outputs the resulting matrix
-                returns [] where each element is a tuple (index, score) - the list is sorted
+                returns a dataframe with the columns 'rank', 'gene', 'similarity_score'
     """
     # Check the arguments
     if not isinstance(df_features, pd.DataFrame):

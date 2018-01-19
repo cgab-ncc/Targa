@@ -44,3 +44,13 @@ df_topsis_ranked = targa.topsis(df_features=df_filtered_genes,
                                 verbose=False)
 
 df_topsis_ranked.to_csv("TCGA_PRAD_TOPSIS_20_Metabolic_Genes_Similarity_Scores.csv", index=False, columns=['rank', 'gene', 'similarity_score'])
+
+# GSEA - prerank
+msigdb_file = "/home/jinseoklee/Documents/Projects/Targa/data/msigdb/msigdb.v6.1.symbols.gmt"
+df_ranked_genes = df_topsis_ranked.loc[:,['gene', 'similarity_score']]
+df_ranked_genes.columns = ['gene', 'weight'] # rename the 'similarity_score' column to 'weight'
+gsea_prerank_results = targa.prerank_gsea(df_ranked_genes=df_ranked_genes,
+                                          report_save_dir="/home/jinseoklee/Documents/Projects/Targa/examples/GSEA_TCGA_PRAD_20_Metabolic_Genes_All_MSIGDB",
+                                          top_k=-1,
+                                          min_size=3,
+                                          msigdb_file=msigdb_file)
